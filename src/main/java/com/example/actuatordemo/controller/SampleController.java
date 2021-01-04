@@ -10,9 +10,9 @@ import java.util.concurrent.TimeUnit;
 @RestController
 public class SampleController {
 
-    @GetMapping("/")
+    @GetMapping("/health")
     public String sayHello(@RequestParam(value = "name", defaultValue = "Guest") String name) {
-        return "Hello " + name + "!!";
+        return "{'message': 'Healthy'}";
     }
 
     @GetMapping("/slowApi")
